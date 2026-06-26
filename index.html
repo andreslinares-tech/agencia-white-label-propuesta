@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>Propuesta v2.0 · Agencia White-Label · Inflect / AL Consulting</title>
+<title>Cotización · Sistema Comercial GHL + Bot IA · Inflect / AL Consulting</title>
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,64 +26,21 @@
   .display { font-family: 'Space Grotesk', system-ui, sans-serif; }
   .font-mono { font-family: 'Geist Mono', ui-monospace, monospace; }
   .serif-italic { font-family: 'Source Serif 4', Georgia, serif; font-style: italic; }
-  html { scroll-behavior: smooth; }
 
-  /* Grain dot pattern */
   .grain { position: fixed; inset: 0; pointer-events: none; opacity: 0.025; background-image: radial-gradient(#fff 1px, transparent 1px); background-size: 4px 4px; z-index: 1; }
-
-  /* Hero gradient text */
   .gradient-text { background: linear-gradient(135deg, #7c3aed 0%, #22d3ee 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-  .gradient-violet { background: linear-gradient(135deg, #c4b5fd 0%, #7c3aed 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
 
-  /* Glow shadows */
   .glow-violet { box-shadow: 0 0 60px -15px rgba(124, 58, 237, 0.5); }
-  .glow-cyan { box-shadow: 0 0 40px -15px rgba(34, 211, 238, 0.4); }
   .glow-emerald { box-shadow: 0 0 30px -15px rgba(16, 185, 129, 0.4); }
 
-  .toc-link { transition: color 0.15s, border-color 0.15s; }
-  .toc-link:hover { color: rgb(255 255 255); border-left-color: rgb(139 92 246); }
-
-  /* Diagram cards */
   .diagram-card { background: rgba(20, 20, 28, 0.6); border: 1px solid var(--border); border-radius: 24px; padding: 28px; backdrop-filter: blur(8px); }
   @media (min-width: 768px) { .diagram-card { padding: 32px; } }
 
-  /* Pills */
   .pill { display: inline-block; padding: 3px 9px; border-radius: 6px; font-size: 11px; font-family: 'Geist Mono', ui-monospace, monospace; font-weight: 500; }
   .pill-violet  { background: rgba(139, 92, 246, 0.15); border: 1px solid rgba(139, 92, 246, 0.35); color: rgb(196, 181, 253); }
-  .pill-amber   { background: rgba(245, 158, 11, 0.15); border: 1px solid rgba(245, 158, 11, 0.35); color: rgb(252, 211, 77); }
   .pill-cyan    { background: rgba(6, 182, 212, 0.15);  border: 1px solid rgba(6, 182, 212, 0.35);  color: rgb(165, 243, 252); }
   .pill-emerald { background: rgba(16, 185, 129, 0.15); border: 1px solid rgba(16, 185, 129, 0.35); color: rgb(167, 243, 208); }
-  .pill-rose    { background: rgba(244, 63, 94, 0.15);  border: 1px solid rgba(244, 63, 94, 0.35);  color: rgb(253, 164, 175); }
-  .pill-blue    { background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.35); color: rgb(147, 197, 253); }
-  .pill-zinc    { background: rgba(113, 113, 122, 0.15); border: 1px solid rgba(113, 113, 122, 0.35); color: rgb(212, 212, 216); }
 
-  /* Expandable session cards */
-  details.wf-card {
-    background: rgba(20, 20, 28, 0.5);
-    border: 1px solid var(--border-strong);
-    border-radius: 16px;
-    margin-bottom: 14px; overflow: hidden;
-    transition: border-color 0.2s, box-shadow 0.2s;
-  }
-  details.wf-card[open] { border-color: rgba(139, 92, 246, 0.4); box-shadow: 0 0 40px -15px rgba(124, 58, 237, 0.25); }
-  details.wf-card > summary {
-    padding: 18px 22px; cursor: pointer; list-style: none;
-    display: flex; align-items: center; justify-content: space-between;
-    gap: 16px; flex-wrap: wrap;
-  }
-  details.wf-card > summary::-webkit-details-marker { display: none; }
-  details.wf-card > summary::after {
-    content: '＋'; font-family: 'Geist Mono', monospace;
-    color: rgb(167, 139, 250); font-size: 18px; flex-shrink: 0;
-  }
-  details.wf-card[open] > summary::after { content: '−'; }
-  details.wf-card > .wf-body {
-    padding: 0 22px 22px;
-    border-top: 1px solid rgba(255, 255, 255, 0.04);
-    padding-top: 18px;
-  }
-
-  /* Step tables */
   .step-table { width: 100%; border-collapse: collapse; font-size: 13px; }
   .step-table th {
     text-align: left; font-family: 'Geist Mono', monospace;
@@ -96,761 +53,152 @@
     border-bottom: 1px solid rgba(255, 255, 255, 0.04);
     color: rgba(255, 255, 255, 0.92); line-height: 1.6;
   }
-  .step-table td:first-child { font-weight: 500; width: 230px; font-family: 'Inter', sans-serif; color: #fff; }
+  .step-table td:first-child { font-weight: 500; width: 240px; font-family: 'Inter', sans-serif; color: #fff; }
   .step-table tr:last-child td { border-bottom: none; }
 
-  /* Phase cards (horizontal scroll) */
-  .phase-card {
-    flex-shrink: 0; width: 220px; border-radius: 14px;
-    background: linear-gradient(135deg, #14141c 0%, #0c0c14 100%);
-    border: 1px solid var(--border-strong);
-    padding: 16px; display: flex; flex-direction: column; gap: 8px;
-    transition: border-color 0.2s, transform 0.2s, box-shadow 0.2s;
-  }
-  .phase-card:hover { transform: translateY(-3px); border-color: rgba(139, 92, 246, 0.4); box-shadow: 0 0 30px -15px rgba(124, 58, 237, 0.3); }
-
-  /* Stage cards (deliverables) */
-  .stage-card {
-    flex-shrink: 0; width: 240px; border-radius: 14px;
-    background: linear-gradient(135deg, #14141c 0%, #0c0c14 100%);
-    border: 1px solid var(--border-strong);
-    overflow: hidden; display: flex; flex-direction: column;
-    transition: border-color 0.2s, transform 0.2s;
-  }
-  .stage-card:hover { transform: translateY(-3px); border-color: rgba(139, 92, 246, 0.4); }
-  .stage-card .accent { height: 4px; }
-  .stage-card .body { padding: 16px; display: flex; flex-direction: column; gap: 10px; flex: 1; }
-  .stage-card .desc {
-    font-size: 11px; color: rgba(255, 255, 255, 0.85); line-height: 1.55;
-    margin-top: auto; padding-top: 10px; border-top: 1px solid rgba(255, 255, 255, 0.04);
-  }
-
-  /* Pillar cards (with icons) */
-  .pillar { transition: all 0.25s ease; background: rgba(20, 20, 28, 0.6); border: 1px solid var(--border); border-radius: 18px; padding: 24px; }
-  .pillar:hover { transform: translateY(-4px); border-color: rgba(139, 92, 246, 0.4); box-shadow: 0 0 40px -15px rgba(124, 58, 237, 0.3); }
-  .pillar-icon { width: 44px; height: 44px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
-
-  /* Pricing rows */
   .pricing-row { display: grid; grid-template-columns: 1fr auto; gap: 16px; align-items: center; padding: 14px 0; border-bottom: 1px solid rgba(255, 255, 255, 0.04); }
   .pricing-row:last-child { border-bottom: 0; }
-
-  /* Risk cards */
-  .risk-card { background: rgba(20, 20, 28, 0.5); border: 1px solid var(--border-strong); border-left: 3px solid rgba(245, 158, 11, 0.6); border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; }
-
-  /* Step nums for próximos pasos */
-  .step-num { width: 36px; height: 36px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-family: 'Geist Mono', monospace; font-weight: 600; font-size: 14px; background: rgba(139, 92, 246, 0.15); border: 1px solid rgba(139, 92, 246, 0.4); color: rgb(196, 181, 253); flex-shrink: 0; }
-
-  /* Pull quote */
-  blockquote.pull-quote {
-    border-left: 3px solid rgba(139, 92, 246, 0.6);
-    padding: 6px 0 6px 18px;
-    font-family: 'Source Serif 4', Georgia, serif;
-    font-style: italic;
-    color: rgba(255, 255, 255, 0.92);
-    line-height: 1.65;
-    font-size: 1rem;
-  }
-  @media (min-width: 768px) { blockquote.pull-quote { font-size: 1.05rem; } }
-
-  /* Sticky CTA mobile */
-  @media (max-width: 768px) { main { padding-bottom: 6rem; } }
 </style>
 </head>
 <body class="antialiased min-h-screen relative">
-
 <div class="grain"></div>
 <div class="fixed inset-0 pointer-events-none z-0" style="background: radial-gradient(ellipse 80% 50% at 50% -10%, rgba(139, 92, 246, 0.12), transparent 60%);"></div>
 
-<div class="relative max-w-[1400px] mx-auto flex z-10">
+<main class="relative z-10 max-w-3xl mx-auto px-5 md:px-8 py-12 md:py-16">
 
-  <!-- TOC SIDEBAR (desktop) -->
-  <aside class="hidden lg:block w-60 shrink-0 sticky top-0 h-screen pt-20 px-6 overflow-y-auto bg-[#0c0c12]/80 backdrop-blur-md border-r border-white/[0.06]">
-    <div class="flex items-center gap-2 mb-5">
-      <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-violet-500 to-cyan-400 flex items-center justify-center font-display font-bold text-bg text-xs text-black">IF</div>
-      <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-white">Propuesta v2.0</p>
-    </div>
-    <nav class="space-y-0.5">
-      <a href="#trato" class="toc-link block py-2 px-3 text-sm text-white/80 border-l border-transparent">01 · El trato</a>
-      <a href="#porque" class="toc-link block py-2 px-3 text-sm text-white/80 border-l border-transparent">02 · Por qué</a>
-      <a href="#diagnostico" class="toc-link block py-2 px-3 text-sm text-white/80 border-l border-transparent">03 · Diagnóstico</a>
-      <a href="#sistema" class="toc-link block py-2 px-3 text-sm text-white/80 border-l border-transparent">04 · El sistema en 15 días</a>
-      <a href="#detalle" class="toc-link block py-2 px-3 text-sm text-white/80 border-l border-transparent">05 · Detalle por bloque</a>
-      <a href="#deliverables" class="toc-link block py-2 px-3 text-sm text-white/80 border-l border-transparent">06 · Deliverables</a>
-      <a href="#negocio" class="toc-link block py-2 px-3 text-sm text-white/80 border-l border-transparent">07 · El negocio para tu agencia</a>
-      <a href="#pricing" class="toc-link block py-2 px-3 text-sm text-white/80 border-l border-transparent">08 · Inversión</a>
-      <a href="#riesgos" class="toc-link block py-2 px-3 text-sm text-white/80 border-l border-transparent">09 · Riesgos</a>
-      <a href="#next" class="toc-link block py-2 px-3 text-sm text-white/80 border-l border-transparent">10 · Próximos pasos</a>
-    </nav>
-
-    <div class="mt-10 pt-6 border-t border-white/[0.06]">
-      <p class="font-mono text-[10px] uppercase tracking-wider text-white/60 mb-2">Destinatario</p>
-      <p class="text-sm text-white">Agencias Partner</p>
-      <p class="text-xs text-white/60">White-label · invisible</p>
-    </div>
-    <div class="mt-4">
-      <p class="font-mono text-[10px] uppercase tracking-wider text-white/60 mb-2">Producto</p>
-      <p class="text-sm text-white">1 implementación llave en mano</p>
-      <p class="text-xs text-white/60">Sistema GHL + Bot IA (blueprint clínica dental)</p>
-    </div>
-    <div class="mt-4">
-      <p class="font-mono text-[10px] uppercase tracking-wider text-white/60 mb-2">Stack</p>
-      <p class="text-sm text-white">Go High Level</p>
-      <p class="text-xs text-white/60">WhatsApp · Conversation AI</p>
-    </div>
-    <div class="mt-4">
-      <p class="font-mono text-[10px] uppercase tracking-wider text-white/60 mb-2">Implementador</p>
-      <p class="text-sm text-white">Andrés</p>
-      <p class="text-xs text-white/60">Inflect / AL Consulting</p>
-    </div>
-  </aside>
-
-  <!-- MAIN -->
-  <main class="flex-1 px-5 md:px-10 py-10 md:py-20 max-w-[1100px]">
-
-    <!-- HEADER STICKY (mobile) -->
-    <div class="lg:hidden sticky top-0 z-50 -mx-5 mb-8 bg-bg/85 backdrop-blur-md border-b border-white/[0.06]">
-      <div class="px-5 py-3 flex items-center justify-between gap-4">
-        <div class="flex items-center gap-3 min-w-0">
-          <div class="w-8 h-8 rounded-lg bg-gradient-to-br from-violet-500 to-cyan-400 flex items-center justify-center shrink-0 font-display font-bold text-black text-xs">IF</div>
-          <div class="min-w-0">
-            <div class="text-[10px] text-white/50 uppercase tracking-wider font-mono">Propuesta v2.0</div>
-            <div class="display font-semibold text-sm truncate">Agencia White-Label</div>
-          </div>
-        </div>
-        <span class="shrink-0 pill pill-cyan">v2.0</span>
-      </div>
-    </div>
-
-    <!-- HEADER HERO -->
-    <header class="mb-16 md:mb-24">
-      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/[0.08] text-xs text-white/80 mb-6">
-        <span class="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-pulse"></span>
-        <span class="font-mono text-[11px]">White-label · Llave en mano · 15 días hábiles</span>
-      </div>
-      <h1 class="display text-4xl md:text-6xl lg:text-7xl font-bold tracking-tight leading-[1.02]">
-        Tu agencia lo vende.<br />
-        Nosotros lo <span class="gradient-text">implementamos</span>.
-      </h1>
-      <p class="mt-7 text-lg md:text-xl text-white/85 max-w-2xl leading-relaxed">
-        Implementación llave en mano y 100% white-label de un sistema comercial completo en GHL con recepcionista IA. Listo para que tu cliente opere en 15 días hábiles. Tu marca al frente, nuestra fábrica atrás.
-      </p>
-      <blockquote class="pull-quote mt-7 max-w-3xl">
-        Vendé el resultado. La ingeniería la ponemos nosotros.
-        <span class="block not-italic font-sans text-xs text-white/55 mt-2">— Andrés · Inflect</span>
-      </blockquote>
-      <div class="flex flex-wrap gap-2 mt-7">
-        <span class="pill pill-violet">White-label total</span>
-        <span class="pill pill-cyan">Llave en mano</span>
-        <span class="pill pill-emerald">Bot IA recepcionista</span>
-        <span class="pill pill-violet">Pipeline 8 etapas</span>
-        <span class="pill pill-cyan">8 workflows</span>
-        <span class="pill pill-amber">USD 750 / implementación</span>
-      </div>
-      <div class="flex flex-wrap gap-3 mt-8">
-        <a href="#sistema" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-medium transition glow-violet">
-          Ver el sistema en 15 días
-          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-        </a>
-        <a href="#pricing" class="inline-flex items-center gap-2 px-5 py-3 rounded-xl bg-white/[0.04] hover:bg-white/[0.08] border border-white/[0.10] text-white font-medium transition">
-          Ver inversión
-        </a>
-      </div>
-    </header>
-
-    <!-- 01 · EL TRATO -->
-    <section id="trato" class="mb-20 md:mb-24 scroll-mt-12">
-      <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-violet-300 mb-3">01 · El trato</p>
-      <h2 class="display text-2xl md:text-4xl font-bold tracking-tight mb-3">Cómo funciona el modelo</h2>
-      <p class="serif-italic text-white/85 mb-8 max-w-3xl">Vendé el resultado. La ingeniería la ponemos nosotros. Tu marca al frente, nuestra fábrica atrás.</p>
-
-      <div class="diagram-card">
-        <table class="step-table">
-          <tbody>
-            <tr><td>Qué entregamos</td><td>Sistema comercial GHL completo + Bot IA recepcionista (blueprint clínica dental)</td></tr>
-            <tr><td>Modelo</td><td><span class="pill pill-violet">White-label</span> — invisible. Tu marca al frente, el cliente es tuyo.</td></tr>
-            <tr><td>Tiempo de entrega</td><td>~15 días hábiles</td></tr>
-            <tr><td>Precio mayorista</td><td><span class="pill pill-amber">USD 750</span> / implementación</td></tr>
-            <tr><td>Reventa sugerida</td><td>USD 2.000 – 3.000 al cliente final → margen 2–3x</td></tr>
-            <tr><td>Soporte post-launch</td><td><span class="pill pill-cyan">Opcional</span> · abono mensual USD 120</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- 02 · POR QUÉ -->
-    <section id="porque" class="mb-20 md:mb-24 scroll-mt-12">
-      <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-violet-300 mb-3">02 · Por qué</p>
-      <h2 class="display text-2xl md:text-4xl font-bold tracking-tight mb-3">Tres razones para tercerizar la implementación</h2>
-      <p class="serif-italic text-white/85 mb-8 max-w-3xl">Vos sumás capacidad técnica de IA sin contratar a nadie. Nosotros quedamos invisibles.</p>
-
-      <div class="grid md:grid-cols-3 gap-4">
-        <div class="pillar">
-          <div class="pillar-icon mb-4" style="background: rgba(139, 92, 246, 0.15);">
-            <svg class="w-6 h-6 text-violet-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0 1 12 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2m4 6h.01M5 20h14a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2v10a2 2 0 0 0 2 2z"/></svg>
-          </div>
-          <div class="flex items-center gap-2 mb-2"><span class="pill pill-violet">01</span><span class="font-mono text-[10px] uppercase tracking-wider text-white/50">Pilar</span></div>
-          <h3 class="display font-semibold text-base mb-2">White-label total</h3>
-          <p class="text-sm text-white/80 leading-relaxed">Sos vos al frente. Marca tuya, contrato tuyo, cliente tuyo. Entregables sin nuestra firma. Nadie sabe que existimos.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon mb-4" style="background: rgba(6, 182, 212, 0.15);">
-            <svg class="w-6 h-6 text-cyan-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
-          </div>
-          <div class="flex items-center gap-2 mb-2"><span class="pill pill-cyan">02</span><span class="font-mono text-[10px] uppercase tracking-wider text-white/50">Pilar</span></div>
-          <h3 class="display font-semibold text-base mb-2">Fábrica estandarizada</h3>
-          <p class="text-sm text-white/80 leading-relaxed">Línea de montaje de 9 pasos idéntica en cada implementación. Calidad consistente, sin improvisar, sin reinventar la rueda por cliente.</p>
-        </div>
-        <div class="pillar">
-          <div class="pillar-icon mb-4" style="background: rgba(16, 185, 129, 0.15);">
-            <svg class="w-6 h-6 text-emerald-300" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/></svg>
-          </div>
-          <div class="flex items-center gap-2 mb-2"><span class="pill pill-emerald">03</span><span class="font-mono text-[10px] uppercase tracking-wider text-white/50">Pilar</span></div>
-          <h3 class="display font-semibold text-base mb-2">Llave en mano</h3>
-          <p class="text-sm text-white/80 leading-relaxed">Entregamos el sistema operativo, testeado y documentado. Vos no tocás una sola configuración: lo recibís funcionando.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- 03 · DIAGNÓSTICO -->
-    <section id="diagnostico" class="mb-20 md:mb-24 scroll-mt-12">
-      <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-violet-300 mb-3">03 · Diagnóstico</p>
-      <h2 class="display text-2xl md:text-4xl font-bold tracking-tight mb-3">Lo que cada uno pone</h2>
-      <p class="serif-italic text-white/85 mb-8 max-w-3xl">Vos tenés la relación y la venta. Nosotros la capacidad técnica de IA. Encajan.</p>
-
-      <div class="grid md:grid-cols-2 gap-5">
-        <div class="diagram-card" style="border-color: rgba(16, 185, 129, 0.25);">
-          <div class="flex items-center gap-2 mb-4">
-            <span class="pill pill-emerald">✓ Tu agencia</span>
-            <span class="font-mono text-[10px] uppercase tracking-wider text-white/60">Lo que ya tiene</span>
-          </div>
-          <ul class="space-y-2.5 text-sm text-white/90">
-            <li class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">›</span><span>Cartera de clientes y relación de confianza</span></li>
-            <li class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">›</span><span>Marca propia para presentar el sistema como suyo</span></li>
-            <li class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">›</span><span>Capacidad de venta, pauta y prospección</span></li>
-            <li class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">›</span><span>El cliente final que necesita el sistema</span></li>
-          </ul>
-        </div>
-
-        <div class="diagram-card" style="border-color: rgba(139, 92, 246, 0.25);">
-          <div class="flex items-center gap-2 mb-4">
-            <span class="pill pill-violet">⚙ Nosotros</span>
-            <span class="font-mono text-[10px] uppercase tracking-wider text-white/60">Lo que ponemos</span>
-          </div>
-          <ul class="space-y-2.5 text-sm text-white/90">
-            <li class="flex gap-2"><span class="text-violet-300 shrink-0 mt-0.5">›</span><span>Capacidad técnica de IA conversacional en GHL</span></li>
-            <li class="flex gap-2"><span class="text-violet-300 shrink-0 mt-0.5">›</span><span>El tiempo y el equipo para armar pipeline + workflows + bot + KB</span></li>
-            <li class="flex gap-2"><span class="text-violet-300 shrink-0 mt-0.5">›</span><span>Integración de WhatsApp no oficial + mensajería automatizada por workflow</span></li>
-            <li class="flex gap-2"><span class="text-violet-300 shrink-0 mt-0.5">›</span><span>Un blueprint probado y replicable — no un experimento</span></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- 04 · EL SISTEMA EN ~6 DÍAS -->
-    <section id="sistema" class="mb-20 md:mb-24 scroll-mt-12">
-      <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-violet-300 mb-3">04 · El sistema en 15 días</p>
-      <h2 class="display text-2xl md:text-4xl font-bold tracking-tight mb-3">La línea de montaje</h2>
-      <p class="serif-italic text-white/85 mb-8 max-w-3xl">Cinco fases. De la conexión GHL al go-live, con cada bloque andando antes de la siguiente.</p>
-
-      <div class="diagram-card">
-        <div class="flex items-center justify-between mb-5">
-          <p class="font-mono text-[10px] uppercase tracking-[0.2em] text-white/60">Cronograma · 15 días hábiles</p>
-          <p class="font-mono text-[10px] text-white/40">scroll →</p>
-        </div>
-        <div class="overflow-x-auto pb-3 -mx-6 px-6 md:-mx-8 md:px-8">
-          <div class="flex gap-3 items-stretch min-w-max">
-
-            <div class="phase-card">
-              <span class="font-mono text-[10px] uppercase tracking-wider text-violet-300">Fase 1 · 2 días</span>
-              <h3 class="display text-sm font-semibold text-white">Setup &amp; Pipeline</h3>
-              <span class="self-start pill pill-violet">Estructura</span>
-              <p class="text-[11px] text-white/75 leading-relaxed mt-1">Conexión GHL · Pipeline 8 etapas (3 zonas: bot / humano / cierre) · Custom Fields + Values + Tags.</p>
-            </div>
-            <div class="flex items-center text-white/30 px-1">▸</div>
-
-            <div class="phase-card">
-              <span class="font-mono text-[10px] uppercase tracking-wider text-violet-300">Fase 2 · 4 días</span>
-              <h3 class="display text-sm font-semibold text-white">Automatizaciones</h3>
-              <span class="self-start pill pill-violet">Workflows</span>
-              <p class="text-[11px] text-white/75 leading-relaxed mt-1">8 Workflows con doble entrega (instrucciones UI + prompt para AI Builder).</p>
-            </div>
-            <div class="flex items-center text-white/30 px-1">▸</div>
-
-            <div class="phase-card">
-              <span class="font-mono text-[10px] uppercase tracking-wider text-violet-300">Fase 3 · 3 días</span>
-              <h3 class="display text-sm font-semibold text-white">Bot IA recepcionista</h3>
-              <span class="self-start pill pill-cyan">Conversation AI</span>
-              <p class="text-[11px] text-white/75 leading-relaxed mt-1">Bot completo — 3 prompts + Bot Actions + Stop rules.</p>
-            </div>
-            <div class="flex items-center text-white/30 px-1">▸</div>
-
-            <div class="phase-card">
-              <span class="font-mono text-[10px] uppercase tracking-wider text-violet-300">Fase 4 · 2 días</span>
-              <h3 class="display text-sm font-semibold text-white">Knowledge Base</h3>
-              <span class="self-start pill pill-violet">3 KBs</span>
-              <p class="text-[11px] text-white/75 leading-relaxed mt-1">Transversal + tabla de tratamientos CSV + custom responses.</p>
-            </div>
-            <div class="flex items-center text-white/30 px-1">▸</div>
-
-            <div class="phase-card" style="border-color: rgba(16, 185, 129, 0.4); box-shadow: 0 0 20px -10px rgba(16, 185, 129, 0.3);">
-              <span class="font-mono text-[10px] uppercase tracking-wider text-emerald-300">Fase 5 · 4 días</span>
-              <h3 class="display text-sm font-semibold text-white">WhatsApp + Go-live</h3>
-              <span class="self-start pill pill-emerald">Cierre</span>
-              <p class="text-[11px] text-white/75 leading-relaxed mt-1">WhatsApp no oficial conectado · 7 mensajes automatizados · testing pre-launch · monitoreo 1ª semana.</p>
-            </div>
-
-          </div>
-        </div>
-        <div class="flex flex-wrap items-center gap-6 mt-6 pt-4 border-t border-white/[0.04]">
-          <div class="flex items-center gap-2 text-xs"><span class="w-3 h-1.5 rounded-sm bg-violet-400/80"></span><span class="text-white/70">Armado (Fases 1-4)</span></div>
-          <div class="flex items-center gap-2 text-xs"><span class="w-3 h-1.5 rounded-sm bg-emerald-400/80"></span><span class="text-white/70">Go-live con sistema vivo</span></div>
-          <div class="flex items-center gap-2 text-xs"><span class="font-mono text-[10px] text-white/50">15 días hábiles de punta a punta</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 05 · DETALLE POR BLOQUE -->
-    <section id="detalle" class="mb-20 md:mb-24 scroll-mt-12">
-      <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-violet-300 mb-3">05 · Detalle por bloque</p>
-      <h2 class="display text-2xl md:text-4xl font-bold tracking-tight mb-3">Qué hay adentro de cada bloque</h2>
-      <p class="serif-italic text-white/85 mb-8 max-w-3xl">Tocá cada bloque para abrir el detalle. Todo el sistema comercial, pieza por pieza.</p>
-
-      <details class="wf-card" open>
-        <summary>
-          <div class="flex items-center gap-3 flex-wrap">
-            <span class="pill pill-violet">01</span>
-            <h3 class="display text-base md:text-lg font-semibold">Pipeline comercial</h3>
-            <span class="pill pill-zinc">8 etapas</span>
-            <span class="pill pill-cyan">3 zonas</span>
-          </div>
-        </summary>
-        <div class="wf-body">
-          <p class="text-sm text-white/75 mb-4 serif-italic">8 etapas organizadas en 3 zonas funcionales — bot, humana y cierre.</p>
-          <table class="step-table">
-            <thead><tr><th>Zona</th><th>Etapas</th><th>Qué pasa</th></tr></thead>
-            <tbody>
-              <tr><td>Zona bot</td><td><span class="pill pill-violet">Lead nuevo → en conversación</span></td><td>El bot recepcionista atiende, califica y captura datos.</td></tr>
-              <tr><td>Zona humana</td><td><span class="pill pill-cyan">Handoff recepcionista → turno confirmado → consulta+diagnóstico → seña enviada</span></td><td>Handoff con 4 sub-motivos hacia la recepcionista humana.</td></tr>
-              <tr><td>Zona cierre</td><td><span class="pill pill-emerald">Ganado / Perdido</span></td><td>Cierre automático manejado por GHL.</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </details>
-
-      <details class="wf-card">
-        <summary>
-          <div class="flex items-center gap-3 flex-wrap">
-            <span class="pill pill-violet">02</span>
-            <h3 class="display text-base md:text-lg font-semibold">Custom Fields + Values + Tags</h3>
-            <span class="pill pill-zinc">Todos TEXT</span>
-          </div>
-        </summary>
-        <div class="wf-body">
-          <p class="text-sm text-white/75 mb-4 serif-italic">Esquema completo agrupado en carpeta por bot. Todos TEXT.</p>
-          <ul class="space-y-2.5 text-sm text-white/90">
-            <li class="flex gap-2"><span class="text-violet-300 shrink-0 mt-0.5">›</span><span>Custom Fields del bot, todos TEXT, agrupados en carpeta dedicada.</span></li>
-            <li class="flex gap-2"><span class="text-violet-300 shrink-0 mt-0.5">›</span><span>Custom Values del subaccount: correo de salida, alias de pago, link calendario.</span></li>
-            <li class="flex gap-2"><span class="text-violet-300 shrink-0 mt-0.5">›</span><span>Tags para routing y reportería del proceso comercial.</span></li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="wf-card">
-        <summary>
-          <div class="flex items-center gap-3 flex-wrap">
-            <span class="pill pill-violet">03</span>
-            <h3 class="display text-base md:text-lg font-semibold">8 Workflows (doble entrega)</h3>
-            <span class="pill pill-cyan">UI + AI Builder</span>
-          </div>
-        </summary>
-        <div class="wf-body">
-          <p class="text-sm text-white/75 mb-4 serif-italic">Cada workflow con doble entrega: instrucciones UI + prompt para AI Builder.</p>
-          <table class="step-table">
-            <thead><tr><th>Workflow</th><th>Función</th></tr></thead>
-            <tbody>
-              <tr><td>WF01 Lead nuevo entrante</td><td>Filtro por campaña al ingresar el lead.</td></tr>
-              <tr><td>WF02 Handoff Agendar</td><td>Deriva a la recepcionista para coordinar turno.</td></tr>
-              <tr><td>WF03 Handoff Imagen</td><td>Deriva cuando el paciente envía una imagen.</td></tr>
-              <tr><td>WF04 Handoff "No sé"</td><td>Deriva cuando el bot no puede resolver.</td></tr>
-              <tr><td>WF05 Handoff pedido humano</td><td>Deriva cuando el paciente pide hablar con una persona.</td></tr>
-              <tr><td>WF06 Follow-up 2h y 24h</td><td>Reengancha leads que no respondieron.</td></tr>
-              <tr><td>WF07 Recordatorio turno</td><td>Recordatorio 24h + 2h pre-turno.</td></tr>
-              <tr><td>WF08 Seña enviada</td><td>Confirmación de la seña recibida.</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </details>
-
-      <details class="wf-card">
-        <summary>
-          <div class="flex items-center gap-3 flex-wrap">
-            <span class="pill pill-cyan">04</span>
-            <h3 class="display text-base md:text-lg font-semibold">Bot Conversation AI (recepcionista IA)</h3>
-            <span class="pill pill-zinc">Bot Goals V2</span>
-          </div>
-        </summary>
-        <div class="wf-body">
-          <p class="text-sm text-white/75 mb-4 serif-italic">El recepcionista IA que atiende, captura y deriva.</p>
-          <ul class="space-y-2.5 text-sm text-white/90">
-            <li class="flex gap-2"><span class="text-cyan-300 shrink-0 mt-0.5">›</span><span>Personality + Objective con Script Flow + Additional Information.</span></li>
-            <li class="flex gap-2"><span class="text-cyan-300 shrink-0 mt-0.5">›</span><span>Bot Actions: Trigger Workflow + Add Contact Info.</span></li>
-            <li class="flex gap-2"><span class="text-cyan-300 shrink-0 mt-0.5">›</span><span>Stop Bot rules para frenar cuando corresponde.</span></li>
-            <li class="flex gap-2"><span class="text-cyan-300 shrink-0 mt-0.5">›</span><span>Captura tipo de tratamiento, motivo, urgencia y handoff motivo.</span></li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="wf-card">
-        <summary>
-          <div class="flex items-center gap-3 flex-wrap">
-            <span class="pill pill-violet">05</span>
-            <h3 class="display text-base md:text-lg font-semibold">Knowledge Base</h3>
-            <span class="pill pill-zinc">3 KBs</span>
-          </div>
-        </summary>
-        <div class="wf-body">
-          <p class="text-sm text-white/75 mb-4 serif-italic">Tres KBs para que el bot responda con precisión.</p>
-          <table class="step-table">
-            <thead><tr><th>KB</th><th>Contenido</th></tr></thead>
-            <tbody>
-              <tr><td>Transversal</td><td>Horarios, ubicación, equipo, FAQs.</td></tr>
-              <tr><td>Tabla de tratamientos</td><td>Catálogo en CSV.</td></tr>
-              <tr><td>Custom responses</td><td>Precios fijos, obras sociales, términos legales.</td></tr>
-            </tbody>
-          </table>
-        </div>
-      </details>
-
-      <details class="wf-card">
-        <summary>
-          <div class="flex items-center gap-3 flex-wrap">
-            <span class="pill pill-cyan">06</span>
-            <h3 class="display text-base md:text-lg font-semibold">WhatsApp (no oficial)</h3>
-            <span class="pill pill-zinc">7 mensajes</span>
-          </div>
-        </summary>
-        <div class="wf-body">
-          <p class="text-sm text-white/75 mb-4 serif-italic">WhatsApp no oficial (proveedor externo) — sin aprobación de Meta, sin esperas. 7 mensajes automatizados en español.</p>
-          <ul class="space-y-2.5 text-sm text-white/90">
-            <li class="flex gap-2"><span class="text-cyan-300 shrink-0 mt-0.5">›</span><span>Bienvenida · follow-up 2h · follow-up 24h.</span></li>
-            <li class="flex gap-2"><span class="text-cyan-300 shrink-0 mt-0.5">›</span><span>Recordatorio turno 24h · recordatorio turno 2h.</span></li>
-            <li class="flex gap-2"><span class="text-cyan-300 shrink-0 mt-0.5">›</span><span>Confirmación handoff · alias pago seña.</span></li>
-            <li class="flex gap-2"><span class="text-cyan-300 shrink-0 mt-0.5">›</span><span>Merge tags directos — sin variables posicionales ni aprobación previa.</span></li>
-          </ul>
-        </div>
-      </details>
-
-      <details class="wf-card">
-        <summary>
-          <div class="flex items-center gap-3 flex-wrap">
-            <span class="pill pill-emerald">07</span>
-            <h3 class="display text-base md:text-lg font-semibold">Testing + Go-live</h3>
-            <span class="pill pill-zinc">E2E</span>
-          </div>
-        </summary>
-        <div class="wf-body">
-          <p class="text-sm text-white/75 mb-4 serif-italic">Verificación completa antes de poner el bot a Auto Pilot.</p>
-          <ul class="space-y-2.5 text-sm text-white/90">
-            <li class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">›</span><span>Preflight + carga verificada de CFs / pipeline / workflows / bot / KBs.</span></li>
-            <li class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">›</span><span>WhatsApp no oficial conectado y enviando.</span></li>
-            <li class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">›</span><span>Casos de prueba E2E.</span></li>
-            <li class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">›</span><span>Bot a Auto Pilot.</span></li>
-          </ul>
-        </div>
-      </details>
-    </section>
-
-    <!-- 06 · DELIVERABLES -->
-    <section id="deliverables" class="mb-20 md:mb-24 scroll-mt-12">
-      <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-cyan-300 mb-3">06 · Deliverables</p>
-      <h2 class="display text-2xl md:text-4xl font-bold tracking-tight mb-3">Lo que recibe tu agencia</h2>
-      <p class="serif-italic text-white/85 mb-8 max-w-3xl">Todo operativo y testeado. Lo recibís funcionando, con tu marca al frente.</p>
-
-      <div class="diagram-card">
-        <div class="overflow-x-auto pb-3 -mx-6 px-6 md:-mx-8 md:px-8">
-          <div class="flex gap-3 items-stretch min-w-max">
-
-            <div class="stage-card">
-              <div class="accent" style="background: linear-gradient(90deg, #7c3aed, #a78bfa);"></div>
-              <div class="body">
-                <span class="font-mono text-[10px] uppercase tracking-wider text-white/60">01</span>
-                <h3 class="display text-base font-semibold leading-snug">Sistema GHL operativo</h3>
-                <span class="self-start pill pill-violet">White-label</span>
-                <p class="desc">Pipeline + Custom Fields + Values + Tags configurados y funcionando, sin nuestra firma.</p>
-              </div>
-            </div>
-            <div class="flex items-center text-white/30 px-1">▸</div>
-
-            <div class="stage-card">
-              <div class="accent" style="background: linear-gradient(90deg, #06b6d4, #22d3ee);"></div>
-              <div class="body">
-                <span class="font-mono text-[10px] uppercase tracking-wider text-white/60">02</span>
-                <h3 class="display text-base font-semibold leading-snug">Bot IA recepcionista</h3>
-                <span class="self-start pill pill-cyan">En producción</span>
-                <p class="desc">Conversation AI completo, capturando datos y derivando a humano cuando corresponde.</p>
-              </div>
-            </div>
-            <div class="flex items-center text-white/30 px-1">▸</div>
-
-            <div class="stage-card">
-              <div class="accent" style="background: linear-gradient(90deg, #7c3aed, #a78bfa);"></div>
-              <div class="body">
-                <span class="font-mono text-[10px] uppercase tracking-wider text-white/60">03</span>
-                <h3 class="display text-base font-semibold leading-snug">8 Workflows activos</h3>
-                <span class="self-start pill pill-violet">Automatización</span>
-                <p class="desc">Lead nuevo, handoffs, follow-ups, recordatorios y confirmación de seña — todo andando.</p>
-              </div>
-            </div>
-            <div class="flex items-center text-white/30 px-1">▸</div>
-
-            <div class="stage-card">
-              <div class="accent" style="background: linear-gradient(90deg, #06b6d4, #22d3ee);"></div>
-              <div class="body">
-                <span class="font-mono text-[10px] uppercase tracking-wider text-white/60">04</span>
-                <h3 class="display text-base font-semibold leading-snug">3 Knowledge Bases</h3>
-                <span class="self-start pill pill-cyan">Cargadas</span>
-                <p class="desc">Transversal, tabla de tratamientos y custom responses listas para que el bot responda con precisión.</p>
-              </div>
-            </div>
-            <div class="flex items-center text-white/30 px-1">▸</div>
-
-            <div class="stage-card">
-              <div class="accent" style="background: linear-gradient(90deg, #06b6d4, #22d3ee);"></div>
-              <div class="body">
-                <span class="font-mono text-[10px] uppercase tracking-wider text-white/60">05</span>
-                <h3 class="display text-base font-semibold leading-snug">7 mensajes WhatsApp</h3>
-                <span class="self-start pill pill-cyan">No oficial</span>
-                <p class="desc">Mensajes automatizados en español por WhatsApp no oficial, listos para enviar — sin esperas de Meta.</p>
-              </div>
-            </div>
-            <div class="flex items-center text-white/30 px-1">▸</div>
-
-            <div class="stage-card glow-emerald">
-              <div class="accent" style="background: linear-gradient(90deg, #10b981, #34d399);"></div>
-              <div class="body">
-                <span class="font-mono text-[10px] uppercase tracking-wider text-white/60">06</span>
-                <h3 class="display text-base font-semibold leading-snug">Doc de handoff</h3>
-                <span class="self-start pill pill-emerald">White-label</span>
-                <p class="desc">Documentación para tu equipo, sin nuestra firma — todo queda en manos de tu agencia.</p>
-              </div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 07 · EL NEGOCIO PARA TU AGENCIA -->
-    <section id="negocio" class="mb-20 md:mb-24 scroll-mt-12">
-      <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-emerald-300 mb-3">07 · El negocio · medible</p>
-      <h2 class="display text-2xl md:text-4xl font-bold tracking-tight mb-3">El negocio para tu agencia</h2>
-      <p class="serif-italic text-white/85 mb-8 max-w-3xl">Lo que capturás revendiendo nuestra fábrica como un producto tuyo.</p>
-
-      <div class="diagram-card">
-        <table class="step-table">
-          <thead><tr><th>Lo que capturás</th><th>Detalle</th></tr></thead>
-          <tbody>
-            <tr><td>Margen por implementación</td><td><span class="pill pill-emerald">USD 1.250 – 2.250</span> · revendés 2.000–3.000, pagás 750</td></tr>
-            <tr><td>Time-to-market</td><td>~15 días vs meses armando capacidad interna</td></tr>
-            <tr><td>Cero contratación técnica</td><td>No contratás dev / especialista IA: la capacidad es nuestra</td></tr>
-            <tr><td>Ingreso recurrente</td><td>Revendés el soporte mensual + el software con tu markup</td></tr>
-            <tr style="background: rgba(16, 185, 129, 0.06);"><td style="color: #fff; font-weight: 600;">Escalabilidad</td><td>Misma fábrica para el cliente 1 y el cliente 50, sin perder calidad</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- 08 · INVERSIÓN -->
-    <section id="pricing" class="mb-20 md:mb-24 scroll-mt-12">
-      <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-amber-300 mb-3">08 · Inversión</p>
-      <h2 class="display text-2xl md:text-4xl font-bold tracking-tight mb-3">Pricing transparente</h2>
-      <p class="serif-italic text-white/85 mb-8 max-w-3xl">Un fee one-time de implementación + software de terceros que no cobramos nosotros.</p>
-
-      <!-- Recurrente / passthrough -->
-      <div class="diagram-card mb-5">
-        <div class="flex items-center justify-between mb-4 flex-wrap gap-2">
-          <div>
-            <span class="font-mono text-[10px] uppercase tracking-wider text-white/60">Recurrente · passthrough</span>
-            <h3 class="display text-xl font-semibold mt-1">Software de terceros</h3>
-          </div>
-          <span class="pill pill-cyan">No lo cobra Andrés</span>
-        </div>
+  <!-- HEADER -->
+  <header class="mb-12">
+    <div class="flex items-center justify-between mb-6 flex-wrap gap-3">
+      <div class="flex items-center gap-3">
+        <div class="w-9 h-9 rounded-lg flex items-center justify-center font-mono font-bold text-sm" style="background: rgba(139, 92, 246, 0.15); border: 1px solid rgba(139, 92, 246, 0.4); color: rgb(196,181,253);">IF</div>
         <div>
-          <div class="pricing-row">
-            <div>
-              <p class="font-medium">Go High Level</p>
-              <p class="text-xs text-white/55 mt-0.5">Cuenta para 4 usuarios — todo incluido, nada extra</p>
-            </div>
-            <p class="font-mono text-lg font-semibold">USD 40<span class="text-xs text-white/55 font-normal">/mes</span></p>
-          </div>
-          <div class="pricing-row">
-            <div>
-              <p class="font-medium">WhatsApp (no oficial)</p>
-              <p class="text-xs text-white/55 mt-0.5">Proveedor externo · tarifa plana, sin cobro por mensaje</p>
-            </div>
-            <p class="font-mono text-lg font-semibold">USD 39<span class="text-xs text-white/55 font-normal">/mes</span></p>
-          </div>
-          <div class="pricing-row" style="border-top: 1px solid rgba(255,255,255,0.08);">
-            <div>
-              <p class="font-medium text-white">Total recurrente</p>
-              <p class="text-xs text-white/55 mt-0.5">Software de terceros, desde el mes 1</p>
-            </div>
-            <p class="font-mono text-lg font-semibold text-cyan-300">USD 79<span class="text-xs text-white/55 font-normal">/mes</span></p>
-          </div>
+          <p class="text-sm font-semibold">Inflect / AL Consulting</p>
+          <p class="text-xs text-white/55">Implementación GHL + Bot IA</p>
         </div>
       </div>
+      <span class="pill pill-violet">Cotización · 26/06/2026</span>
+    </div>
 
-      <!-- One-time -->
-      <div class="diagram-card relative overflow-hidden glow-violet" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.18), rgba(34, 211, 238, 0.06)); border-color: rgba(139, 92, 246, 0.4);">
-        <div class="absolute top-0 right-0 px-3 py-1 text-[10px] font-mono uppercase tracking-wider bg-violet-600 text-white rounded-bl-xl">Precio mayorista</div>
-        <span class="font-mono text-[10px] uppercase tracking-wider text-violet-300">One-time</span>
-        <h3 class="display text-2xl md:text-3xl font-bold mt-1 mb-1">Implementación llave en mano (white-label)</h3>
-        <p class="display text-5xl md:text-6xl font-bold tracking-tight mb-5"><span class="text-violet-200/80">USD</span> <span class="gradient-text">750</span></p>
-        <p class="text-sm text-white/80 mb-4 font-medium">Lo que está incluido:</p>
-        <div class="grid md:grid-cols-2 gap-2.5 text-sm">
-          <div class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">✓</span><span>Pipeline 8 etapas configurado</span></div>
-          <div class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">✓</span><span>Custom Fields + Values + Tags</span></div>
-          <div class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">✓</span><span>8 Workflows (doble entrega UI + AI Builder)</span></div>
-          <div class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">✓</span><span>Bot Conversation AI completo</span></div>
-          <div class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">✓</span><span>3 Knowledge Bases</span></div>
-          <div class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">✓</span><span>7 mensajes WhatsApp (no oficial)</span></div>
-          <div class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">✓</span><span>Testing pre-launch E2E</span></div>
-          <div class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">✓</span><span>Go-live + puesta en producción</span></div>
-          <div class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">✓</span><span>Monitoreo primera semana</span></div>
-          <div class="flex gap-2"><span class="text-emerald-400 shrink-0 mt-0.5">✓</span><span>Doc de handoff white-label</span></div>
-        </div>
-      </div>
+    <h1 class="display text-3xl md:text-4xl font-bold tracking-tight mb-3">
+      Sistema comercial en GHL<br/>+ <span class="gradient-text">Bot IA recepcionista</span>
+    </h1>
+    <p class="text-white/75 leading-relaxed">
+      Implementación llave en mano de un sistema comercial completo en Go High Level con bot de Conversation AI, para una clínica dental. Canal WhatsApp no oficial. Entrega en 15 días hábiles.
+    </p>
+  </header>
 
-      <!-- Opcional + Total -->
-      <div class="diagram-card mt-5">
-        <div class="pricing-row">
-          <div>
-            <p class="font-medium">Opcional (mes 2+) · Optimización + soporte</p>
-            <p class="text-xs text-white/55 mt-0.5">Abono mensual revendible con tu markup</p>
-          </div>
-          <p class="font-mono text-lg font-semibold">USD 120<span class="text-xs text-white/55 font-normal">/mes</span></p>
-        </div>
-      </div>
+  <!-- 1 · QUÉ SE IMPLEMENTA -->
+  <section class="mb-10">
+    <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-violet-300 mb-4">01 · Qué se implementa</p>
+    <div class="diagram-card">
+      <table class="step-table">
+        <thead><tr><th>Componente</th><th>Detalle</th></tr></thead>
+        <tbody>
+          <tr><td>Pipeline comercial</td><td>8 etapas en 3 zonas (bot · humano · cierre)</td></tr>
+          <tr><td>Custom Fields + Values + Tags</td><td>Esquema completo del CRM, agrupado por bot</td></tr>
+          <tr><td>Workflows (automatizaciones)</td><td>8 flujos: lead nuevo, handoffs, follow-up 2h/24h, recordatorio de turno, seña</td></tr>
+          <tr><td>Bot Conversation AI</td><td>Recepcionista IA completa — prompts + Bot Actions + Stop rules</td></tr>
+          <tr><td>Knowledge Base</td><td>3 bases: info general, tabla de tratamientos, respuestas fijas (precios, obras sociales)</td></tr>
+          <tr><td>WhatsApp (no oficial)</td><td>7 mensajes automatizados en español, sin esperas de aprobación</td></tr>
+          <tr><td>Testing + Go-live</td><td>Pruebas E2E + puesta en producción + monitoreo de la 1ª semana</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-      <!-- Total -->
-      <div class="diagram-card mt-5 glow-emerald" style="border-color: rgba(16, 185, 129, 0.35);">
-        <div class="flex flex-wrap items-baseline justify-between gap-2 mb-1">
-          <p class="font-mono text-[10px] uppercase tracking-wider text-white/60">Total para arrancar (one-time)</p>
-          <p class="display text-2xl md:text-3xl font-bold text-emerald-300">USD 750</p>
-        </div>
-        <p class="text-xs text-white/55">USD 750 one-time · Software de terceros aparte (passthrough) · Abono opcional mes 2+ USD 120/mes.</p>
-      </div>
-    </section>
+  <!-- 2 · CRONOGRAMA -->
+  <section class="mb-10">
+    <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-violet-300 mb-4">02 · Cronograma · 15 días hábiles</p>
+    <div class="diagram-card">
+      <table class="step-table">
+        <thead><tr><th>Fase</th><th>Duración</th></tr></thead>
+        <tbody>
+          <tr><td>Setup &amp; Pipeline</td><td>2 días</td></tr>
+          <tr><td>Automatizaciones (8 workflows)</td><td>4 días</td></tr>
+          <tr><td>Bot Conversation AI</td><td>3 días</td></tr>
+          <tr><td>Knowledge Base</td><td>2 días</td></tr>
+          <tr><td>WhatsApp + Testing + Go-live</td><td>4 días</td></tr>
+          <tr style="background: rgba(139, 92, 246, 0.06);"><td style="color:#fff; font-weight:600;">Total</td><td><span class="pill pill-violet">15 días hábiles</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
 
-    <!-- 09 · RIESGOS -->
-    <section id="riesgos" class="mb-20 md:mb-24 scroll-mt-12">
-      <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-amber-300 mb-3">09 · Transparencia</p>
-      <h2 class="display text-2xl md:text-4xl font-bold tracking-tight mb-3">Qué puede salir mal — y qué hacemos</h2>
-      <p class="serif-italic text-white/85 mb-8 max-w-3xl">Identificados antes de empezar. Cada uno con plan de mitigación.</p>
-
-      <div class="risk-card">
-        <div class="flex items-start gap-3">
-          <span class="font-mono text-xs text-amber-300 font-semibold mt-0.5">R1</span>
-          <div>
-            <p class="font-medium mb-1">WhatsApp no oficial depende de un proveedor externo</p>
-            <p class="text-sm text-white/75"><span class="text-amber-300 font-semibold">Mitigación:</span> proveedor probado, número dedicado y tarifa plana (USD 39/mes) sin cobro por mensaje ni esperas de aprobación.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="risk-card">
-        <div class="flex items-start gap-3">
-          <span class="font-mono text-xs text-amber-300 font-semibold mt-0.5">R2</span>
-          <div>
-            <p class="font-medium mb-1">Bot sin KB suficiente cae a "No sé"</p>
-            <p class="text-sm text-white/75"><span class="text-amber-300 font-semibold">Mitigación:</span> KB obligatoria antes del go-live; la agencia/cliente provee FAQs, precios y obras sociales.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="risk-card">
-        <div class="flex items-start gap-3">
-          <span class="font-mono text-xs text-amber-300 font-semibold mt-0.5">R3</span>
-          <div>
-            <p class="font-medium mb-1">El número no oficial puede bloquearse si se envía spam</p>
-            <p class="text-sm text-white/75"><span class="text-amber-300 font-semibold">Mitigación:</span> envíos solo a leads que iniciaron la conversación + ritmo controlado por workflow, sin disparos masivos en frío.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="risk-card">
-        <div class="flex items-start gap-3">
-          <span class="font-mono text-xs text-amber-300 font-semibold mt-0.5">R4</span>
-          <div>
-            <p class="font-medium mb-1">tipo_tratamiento como TEXT libre</p>
-            <p class="text-sm text-white/75"><span class="text-amber-300 font-semibold">Mitigación:</span> mapeo vía tags en el workflow de routing.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="risk-card">
-        <div class="flex items-start gap-3">
-          <span class="font-mono text-xs text-amber-300 font-semibold mt-0.5">R5</span>
-          <div>
-            <p class="font-medium mb-1">El blueprint es dental</p>
-            <p class="text-sm text-white/75"><span class="text-amber-300 font-semibold">Mitigación:</span> otro rubro (inmobiliaria, salud general, etc.) requiere nueva cotización.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- 10 · PRÓXIMOS PASOS -->
-    <section id="next" class="mb-20 md:mb-24 scroll-mt-12">
-      <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-emerald-300 mb-3">10 · Próximos pasos</p>
-      <h2 class="display text-2xl md:text-4xl font-bold tracking-tight mb-3">Cómo empezamos</h2>
-      <p class="serif-italic text-white/85 mb-8 max-w-3xl">Pasos claros antes de arrancar. Todo coordinado con tu agencia.</p>
-
-      <div class="space-y-3">
-        <div class="diagram-card flex items-start gap-4" style="padding: 18px;">
-          <span class="step-num">1</span>
-          <div class="flex-1 pt-1"><p class="text-sm">Tu agencia confirma aceptación y elige el cliente piloto.</p></div>
-        </div>
-        <div class="diagram-card flex items-start gap-4" style="padding: 18px;">
-          <span class="step-num">2</span>
-          <div class="flex-1 pt-1"><p class="text-sm">Comparte accesos GHL + datos del cliente: servicios, FAQs, precios, obras sociales.</p></div>
-        </div>
-        <div class="diagram-card flex items-start gap-4" style="padding: 18px;">
-          <span class="step-num">3</span>
-          <div class="flex-1 pt-1"><p class="text-sm">Activamos GHL (USD 40/mes, 4 usuarios) + WhatsApp no oficial (USD 39/mes).</p></div>
-        </div>
-        <div class="diagram-card flex items-start gap-4" style="padding: 18px;">
-          <span class="step-num">4</span>
-          <div class="flex-1 pt-1"><p class="text-sm">Arrancamos la implementación (~15 días hábiles).</p></div>
-        </div>
-        <div class="diagram-card flex items-start gap-4 glow-emerald" style="padding: 18px; border-color: rgba(16, 185, 129, 0.35);">
-          <span class="step-num" style="background: rgba(16,185,129,0.15); border-color: rgba(16,185,129,0.4); color: rgb(167,243,208);">5</span>
-          <div class="flex-1 pt-1"><p class="text-sm font-medium">Handoff white-label + go-live. El sistema queda operando con tu marca.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="mt-20 pt-10 border-t border-white/[0.06]">
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4">
+  <!-- 3 · PLATAFORMAS (MENSUAL) -->
+  <section class="mb-10">
+    <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-cyan-300 mb-4">03 · Costo de plataformas · mensual</p>
+    <div class="diagram-card">
+      <div class="pricing-row">
         <div>
-          <p class="display font-bold text-base">Andrés · Inflect / AL Consulting</p>
-          <p class="text-sm text-white/65">Implementador técnico · Sistemas comerciales GHL + IA</p>
+          <p class="font-medium">Go High Level</p>
+          <p class="text-xs text-white/55 mt-0.5">Cuenta para 4 usuarios — todo incluido</p>
         </div>
-        <p class="font-mono text-[10px] uppercase tracking-wider text-white/40">Propuesta v2.0 · Agencias Partner · White-label</p>
+        <p class="font-mono text-lg font-semibold">USD 40<span class="text-xs text-white/55 font-normal">/mes</span></p>
       </div>
-    </footer>
+      <div class="pricing-row">
+        <div>
+          <p class="font-medium">WhatsApp (no oficial)</p>
+          <p class="text-xs text-white/55 mt-0.5">Proveedor externo · tarifa plana, sin cobro por mensaje</p>
+        </div>
+        <p class="font-mono text-lg font-semibold">USD 39<span class="text-xs text-white/55 font-normal">/mes</span></p>
+      </div>
+      <div class="pricing-row" style="border-top: 1px solid rgba(255,255,255,0.10);">
+        <div>
+          <p class="font-medium text-white">Total mensual</p>
+          <p class="text-xs text-white/55 mt-0.5">Recurrente, desde el mes 1</p>
+        </div>
+        <p class="font-mono text-xl font-bold text-cyan-300">USD 79<span class="text-xs text-white/55 font-normal">/mes</span></p>
+      </div>
+    </div>
+  </section>
 
-  </main>
+  <!-- 4 · IMPLEMENTACIÓN -->
+  <section class="mb-10">
+    <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-violet-300 mb-4">04 · Implementación · pago único</p>
+    <div class="diagram-card glow-violet" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.18), rgba(34, 211, 238, 0.06)); border-color: rgba(139, 92, 246, 0.4);">
+      <div class="flex items-baseline justify-between flex-wrap gap-2">
+        <div>
+          <h3 class="display text-xl md:text-2xl font-bold">Implementación llave en mano</h3>
+          <p class="text-sm text-white/70 mt-1">Todo lo del punto 01, configurado, probado y en producción.</p>
+        </div>
+        <p class="display text-4xl md:text-5xl font-bold tracking-tight"><span class="text-violet-200/80 text-2xl">USD</span> <span class="gradient-text">750</span></p>
+      </div>
+    </div>
 
-</div>
+    <div class="diagram-card mt-4">
+      <div class="pricing-row">
+        <div>
+          <p class="font-medium">Soporte y optimización <span class="text-xs text-white/55">(opcional, mes 2+)</span></p>
+          <p class="text-xs text-white/55 mt-0.5">Ajustes del bot, KB y workflows según resultados</p>
+        </div>
+        <p class="font-mono text-lg font-semibold">USD 120<span class="text-xs text-white/55 font-normal">/mes</span></p>
+      </div>
+    </div>
+  </section>
 
-<!-- STICKY CTA MOBILE -->
-<div class="lg:hidden fixed bottom-0 inset-x-0 z-40 bg-bg/95 backdrop-blur-md border-t border-white/[0.06] p-3" style="background: rgba(10, 10, 15, 0.95);">
-  <a href="#pricing" class="flex items-center justify-center gap-2 w-full px-5 py-3 rounded-xl bg-violet-600 hover:bg-violet-500 text-white font-medium transition glow-violet">
-    Ver inversión
-    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
-  </a>
-</div>
+  <!-- 5 · RESUMEN -->
+  <section class="mb-12">
+    <p class="font-mono text-[11px] uppercase tracking-[0.2em] text-emerald-300 mb-4">05 · Resumen</p>
+    <div class="diagram-card glow-emerald" style="border-color: rgba(16, 185, 129, 0.35);">
+      <div class="pricing-row">
+        <div><p class="font-medium">Implementación (pago único)</p></div>
+        <p class="font-mono text-lg font-semibold">USD 750</p>
+      </div>
+      <div class="pricing-row">
+        <div><p class="font-medium">Plataformas (mensual)</p></div>
+        <p class="font-mono text-lg font-semibold">USD 79<span class="text-xs text-white/55 font-normal">/mes</span></p>
+      </div>
+      <div class="pricing-row" style="border-top: 1px solid rgba(16,185,129,0.25);">
+        <div><p class="font-semibold text-white">Para arrancar</p></div>
+        <p class="display text-2xl md:text-3xl font-bold text-emerald-300">USD 750 <span class="text-base text-white/55 font-normal">+ USD 79/mes</span></p>
+      </div>
+    </div>
+  </section>
 
+  <footer class="text-center text-xs text-white/40 pt-6 border-t border-white/[0.06]">
+    Inflect / AL Consulting · Cotización válida 30 días · 26/06/2026
+  </footer>
+
+</main>
 </body>
 </html>
